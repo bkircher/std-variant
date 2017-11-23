@@ -7,6 +7,8 @@ CFLAGS=-std=c++17 -stdlib=libc++ -O0 -g \
 	-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib \
 
 EXAMPLES=example1 \
+	 example2 \
+	 example3 \
 
 all: $(EXAMPLES)
 

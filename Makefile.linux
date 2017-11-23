@@ -1,9 +1,11 @@
 CC=g++
 
 CFLAGS=-std=c++17 -O0 -g \
-	-Wall -Wno-c++98-compat \
+	-Wall \
 
 EXAMPLES=example1 \
+	 example2 \
+	 example3 \
 
 all: $(EXAMPLES)
 

@@ -42,9 +42,11 @@ int main() {
 
   // (6) variant::index() returns the index of the current
   // alternative (or 0)
-  std::cout << "var2.index() = " << var2.index() << std::endl;
+  std::cout << "var2.index() = " << var2.index()
+            << std::endl;
   var2 = {};
-  std::cout << "var2.index() = " << var2.index() << std::endl;
+  std::cout << "var2.index() = " << var2.index()
+            << std::endl;
 
   return 0;
 }
