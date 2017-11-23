@@ -15,16 +15,15 @@ int main() {
   // (2) std::bad_variant_access
   var1 = false;
   // int i = std::get<int>(var1); // throws
-  var1 = "Hello, there!";
+  var1 = std::string("Hello, there!");
 
   // auto str = std::get<std::string>(var1); // throws
 
   // (3) Access by index
-  //str = std::get<0>(var1); // compiler warning
+  // str = std::get<0>(var1); // compiler warning
   str = std::get<1>(var1);
   std::cout << str << std::endl;
 
-#if 0
   // (4) std::get_if
   std::variant<int, float> number{42};
   if (auto val = std::get_if<int>(&number)) {
@@ -43,10 +42,9 @@ int main() {
 
   // (6) variant::index() returns the index of the current
   // alternative (or 0)
-  std::cout << "var2.index() = " << var2.index();
+  std::cout << "var2.index() = " << var2.index() << std::endl;
   var2 = {};
-  std::cout << "var2.index() = " << var2.index();
+  std::cout << "var2.index() = " << var2.index() << std::endl;
 
-#endif
   return 0;
 }
